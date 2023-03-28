@@ -6,7 +6,7 @@ function JobPage() {
   const { id } = useParams()
 
   useEffect(() => {
-    fetch(`http://localhost:3000/jobs/${id}`).then((response) => {
+    fetch(`https://job-finder-7edx.onrender.com/jobs/${id}`).then((response) => {
       response.json().then((data) => {
         setJobInfo(data)
       })

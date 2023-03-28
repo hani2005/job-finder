@@ -6,7 +6,7 @@ const Jobs = () => {
   const [jobs, setJobs] = useState("")
   const [search, setSearch] = useState("")
 
-  let url = "https://job-finder-7edx.onrender.com"
+  let url = "https://job-finder-7edx.onrender.com/jobs"
 
   useEffect(() => {
     fetch(url)
