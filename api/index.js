@@ -34,7 +34,13 @@ app.post("/jobs", (req, res) => {
 
 app.get("/jobs", async (req, res) => {
   const jobs = await Job.find()
-  res.send(jobs.splice(0, 10))
+  res.send(jobs)
+})
+
+app.get("/jobs/:id", async (req, res) => {
+  const { id } = req.params
+  const jobDoc = await Job.findById(id)
+  res.json(jobDoc)
 })
 
 app.listen(3000)

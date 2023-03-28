@@ -1,16 +1,18 @@
-import React from 'react'
-import Footer from './Components/FooterDiv/Footer'
-import Jobs from './Components/JobDiv/Jobs'
-import NavBar from './Components/NavBar/NavBar'
-import Value from './Components/ValueDiv/Value'
+import React from "react"
+import { Route, Routes } from "react-router-dom"
+import Layout from "./Layout"
+import HomePage from "./pages/HomePage"
+import JobPage from "./pages/JobPage"
 
 const App = () => {
   return (
-    <div className='justify-center w-[1000px] items-center m-auto bg-white'>
-      <NavBar />
-      <Jobs />
-      <Value />
-      <Footer />
+    <div className="w-[1000px] sm:w-auto sm:flex sm:flex-col overflow-hidden m-auto bg-white">
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/jobs/:id" element={<JobPage />} />
+      </Route>
+    </Routes>
     </div>
   )
 }

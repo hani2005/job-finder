@@ -5,6 +5,11 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
+    screens: {
+      'lg': {'max': '1023px'},
+      'md': {'max': '768px'},
+      'sm': {'max': '480px'},
+    },
     extend: {
       colors: {
         'blueColor': '#2a68ff',
